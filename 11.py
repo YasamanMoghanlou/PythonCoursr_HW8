@@ -171,16 +171,16 @@ def do_button_press():
         canvas.itemconfigure(yellow_lamp, fill='black') #turn off
 
 
-color = 'black'     #the lights current color
-root = Tk ()         #create the main window
+color = 'black'     
+root = Tk ()        
 
 
 root.title("light")
 
-frame = Frame(root)    #create a frame to hold the widgets
-frame.pack()           #make the frame fill the entire window
+frame = Frame(root)    
+frame.pack()           
 
-#create a drawing surface within the frame
+
 canvas = Canvas(frame, width=150, height=200)
 
 #set up the visual aspects of the light
@@ -195,7 +195,7 @@ button = Button(frame, text='turn on/ turn off', command=do_button_press)
 button.grid(row=0, column=0)
 canvas.grid(row=0, column=1)
 
-#start the GUI event loop
+
 root.mainloop()
 print("_____________________")
 
@@ -218,26 +218,30 @@ print ("21.11")
 a = list()
 
 print("Values of a:", a)
+print("_____________________")
+
 
 print ("22.11")
 print ("sets are immutable")
+print("_____________________")
+
 
 print ("23.11")
 a = {20, 19, 2, 10, 7}
 b = {4, 10, 5, 6, 9, 7}
 c = {10, 19}
 
-print (a)
-print (20 in a)
-print (20 not in a)
-print (a & b) # all the items in both sets, similar ones
-print (a | b) #union of these two sets
-print (c < a)
-print (c <= a)
-print (c <= b)
-print (a <= a)
-print (a < a)
-print (len(a))
-print ({x+2 for x in range(10)})
-print ({x-2 for x in a})
-print ({x-2 for x in a if x<10 })
+print (a)             # the answer {2, 19, 20, 7, 10}
+print (20 in a)       # True
+print (20 not in a)   # False
+print (a & b)         # {10, 7} 
+print (a | b)         # {2, 4, 5, 6, 7, 9, 10, 19, 20}
+print (c < a)         # True
+print (c <= a)        # True
+print (c <= b)        # False
+print (a <= a)        # True
+print (a < a)         # False
+print (len(a))                       # 5
+print ({x+2 for x in range(10)})     # {2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+print ({x-2 for x in a})             #{0, 5, 8, 17, 18}
+print ({x-2 for x in a if x<10 })    #{0,5}
