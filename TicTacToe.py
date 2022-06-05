@@ -25,7 +25,7 @@ def winner(b, l):
             (b[0][2] == l and b[1][1] == l and b[2][0] == l))
 
 
-# Configure text on button while playing with another player
+
 def get_text(i, j, gb, l1, l2):
     global sign
     if board[i][j] == ' ':
@@ -50,12 +50,12 @@ def get_text(i, j, gb, l1, l2):
         box = messagebox.showinfo("Tie Game", "Tie Game")
 
 
-# Check if the player can push the button or not
+
 def isfree(i, j):
     return board[i][j] == " "
 
 
-# Check the board is full or not
+
 def isfull():
     flag = True
     for i in board:
@@ -64,7 +64,6 @@ def isfull():
     return flag
 
 
-# Create the GUI of game board for play along with another player
 def gameboard_pl(game_board, l1, l2):
     global button
     button = []
@@ -82,7 +81,7 @@ def gameboard_pl(game_board, l1, l2):
     game_board.mainloop()
 
 
-# Decide the next move of system
+
 def pc():
     possiblemove = []
     for i in range(len(board)):
@@ -115,7 +114,7 @@ def pc():
             return edge[move]
 
 
-# Configure text on button while playing with system
+
 def get_text_pc(i, j, gb, l1, l2):
     global sign
     if board[i][j] == ' ':
@@ -150,7 +149,7 @@ def get_text_pc(i, j, gb, l1, l2):
             get_text_pc(move[0], move[1], gb, l1, l2)
 
 
-# Create the GUI of game board for play along with system
+
 def gameboard_pc(game_board, l1, l2):
     global button
     button = []
@@ -168,7 +167,7 @@ def gameboard_pc(game_board, l1, l2):
     game_board.mainloop()
 
 
-# Initialize the game board to play with system
+
 def withpc(game_board):
     game_board.destroy()
     game_board = Tk()
@@ -182,7 +181,7 @@ def withpc(game_board):
     gameboard_pc(game_board, l1, l2)
 
 
-# Initialize the game board to play with another player
+
 def withplayer(game_board):
     game_board.destroy()
     game_board = Tk()
@@ -197,7 +196,6 @@ def withplayer(game_board):
     gameboard_pl(game_board, l1, l2)
 
 
-# main function
 def play():
     menu = Tk()
     menu.geometry("250x250")
@@ -229,7 +227,7 @@ def play():
     menu.mainloop()
 
 
-# Call main function
+
 if __name__ == '__main__':
     play()
 
