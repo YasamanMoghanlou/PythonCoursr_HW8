@@ -143,4 +143,6 @@ if __name__ == '__main__':
     main()
     
 print("a. the program will print 40, 0, 41, 1, 50, 21 respectively")
+print("b. the minimum is 0")
+print("c. the maximum is Infinity")
 
